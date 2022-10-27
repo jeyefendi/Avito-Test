@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+@import url('http://fonts.cdnfonts.com/css/helvetica-neue-9')
+
+$text: 'Roboto', sans-serif
+$title: 'Helvetica Neue', sans-serif
+%flex
+    display: flex
+    justify-content: center
+    align-items: center
+
+body
+    font-family: $text
+
+h1,h2,h3
+    font-family: $title
+
+.App
+    @extend %flex
+    flex-direction: column
