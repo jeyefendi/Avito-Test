@@ -1,14 +1,21 @@
-import { Routes, Route, Link } from 'react-router-dom'
-import './App.sass'
-import Header from "./components/Header/Header"
-import Feed from "./components/Feed/Feed"
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "./App.sass";
+import Header from "./components/Header/Header";
+import Feed from "./components/Feed/Feed";
+import { PostPage } from "./pages/PostPage";
 
 function App() {
   return (
-    <div className="App mx-auto">
+    <BrowserRouter>
       <Header />
       <Feed />
-    </div>
+      <div className="container">
+        <Switch>
+          <Route path="/" exact />
+          <Route component={PostPage} path="/post" />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 

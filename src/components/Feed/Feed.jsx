@@ -1,10 +1,15 @@
 import React from "react";
 import Post from "./Post";
+import styles from './Feed.module.sass'
 
 const Feed = () => {
-  return <div>
+  return (
+  <main className={styles.feed}>
     <Post/>
-  </div>;
+    <Post/>
+    <Post/>
+  </main>
+  )
 };
 
 export default Feed;
