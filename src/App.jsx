@@ -5,16 +5,20 @@ import Feed from "./components/Feed/Feed";
 import { PostPage } from "./pages/PostPage";
 
 function App() {
+  
+
   return (
     <BrowserRouter>
-      <Header />
-      <Feed />
-      <div className="container">
-        <Switch>
-          <Route path="/" exact />
-          <Route component={PostPage} path="/post" />
-        </Switch>
-      </div>
+      <>
+        <Header />
+        <Feed />
+        <div className="router">
+          <Switch>
+            <Route path="/" exact />
+            <Route component={PostPage} path="/post" />
+          </Switch>
+        </div>
+      </>
     </BrowserRouter>
   );
 }
