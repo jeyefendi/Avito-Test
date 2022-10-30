@@ -11,8 +11,8 @@ function App() {
     <Router>
         <Header />
           <Switch>
-            <Route path="/" exact><Feed/></Route>
-            <Route path="/post/:id" exact><PostPage/></Route>
+            <Route exact path="/" component={Feed}/>
+            <Route exact path="/post/:id" component={PostPage}/>
           </Switch>
     </Router>
   );
