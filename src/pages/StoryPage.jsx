@@ -1,9 +1,9 @@
 import React from 'react'
 
-const PostPage = () => {
+const StoryPage = () => {
   return (
     <div>Hello!</div>
   )
 }
 
-export default PostPage
+export default StoryPage

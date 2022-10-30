@@ -2,9 +2,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.sass";
 import Header from "./components/Header/Header";
 import Feed from "./components/Feed/Feed";
-import PostPage from "./pages/PostPage";
+import StoryPage from "./pages/StoryPage";
 
-function App() {
+const App = () => {
   
 
   return (
@@ -12,7 +12,7 @@ function App() {
         <Header />
           <Switch>
             <Route exact path="/" component={Feed}/>
-            <Route exact path="/post/:id" component={PostPage}/>
+            <Route exact path="/story/:id" component={StoryPage}/>
           </Switch>
     </Router>
   );
