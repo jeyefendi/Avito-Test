@@ -1,25 +1,20 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.sass";
 import Header from "./components/Header/Header";
 import Feed from "./components/Feed/Feed";
-import { PostPage } from "./pages/PostPage";
+import PostPage from "./pages/PostPage";
 
 function App() {
   
 
   return (
-    <BrowserRouter>
-      <>
+    <Router>
         <Header />
-        <Feed />
-        <div className="router">
           <Switch>
-            <Route path="/" exact />
-            <Route component={PostPage} path="/post" />
+            <Route path="/" exact><Feed/></Route>
+            <Route path="/post/:id" exact><PostPage/></Route>
           </Switch>
-        </div>
-      </>
-    </BrowserRouter>
+    </Router>
   );
 }
 
