@@ -27,4 +27,4 @@ const Story = ({ storyId }) => {
   ) : null;
 };
 
-export default Story;
+export default React.memo(Story);
