@@ -1,6 +1,6 @@
 import styles from "./Feed.module.sass";
 import { Link } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { getStory } from "../../services/api";
 import { mapTime } from "../../services/mapTime";
 
