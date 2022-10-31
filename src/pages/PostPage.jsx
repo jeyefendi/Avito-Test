@@ -1,10 +1,11 @@
-import styles from "./Feed.module.sass";
-import { Link } from "react-router-dom";
-import React, { useState, useEffect } from "react";
-import { getStory } from "../../services/api";
-import { mapTime } from "../../services/mapTime";
+import styles from "../components/Feed/Feed.module.sass";
+import React, { useEffect, useState } from "react";
+import { getStory } from "../services/api";
+import { mapTime } from "../services/mapTime";
 
-const Story = ({ storyId }) => {
+
+const PostPage = ({ storyId }) => {
+
   const [story, setStory] = useState({});
 
   useEffect(() => {
@@ -13,7 +14,6 @@ const Story = ({ storyId }) => {
   }, []);
 
   return story && story.url ? (
-    <Link to={`/post/${storyId}`}>
       <div className={styles.story}>
         <h2>{story.title}</h2>
         <div className={styles.subtitle}>
@@ -22,9 +22,7 @@ const Story = ({ storyId }) => {
           <span className={styles.score}> ♥ {story.score}</span>
         </div>
       </div>
-      <hr/>
-    </Link>
   ) : null;
-};
+}
 
-export default Story;
+export default PostPage;
