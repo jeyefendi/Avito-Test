@@ -16,9 +16,11 @@ const Story = ({ storyId }) => {
     <Link to={`/story/${storyId}`}>
       <div className={styles.story}>
         <h2>{story.title}</h2>
-        <span className={styles.author}>👤{story.by}</span>
-        <time dateTime={story.time}>⌛{mapTime(story.time)}</time>
-        <span className={styles.score}> ♥{story.score}</span>
+        <div className={styles.subtitle}>
+          <span className={styles.author}>👤 {story.by}</span>
+          <time dateTime={story.time}>⌛ {mapTime(story.time)}</time>
+          <span className={styles.score}> ♥ {story.score}</span>
+        </div>
       </div>
       <hr/>
     </Link>
