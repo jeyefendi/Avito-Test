@@ -1,19 +1,19 @@
 import styles from "./Feed.module.sass";
 import Story from "./Story";
-import React, { useEffect, useState } from "react";
+import { useQuery } from "react-query";
 import { getStoryIds } from "../../services/api";
 
 const Feed = () => {
 
-  const [storyIds, setStoryIds] = useState([]);
+  const { isLoading, data } = useQuery('hacker-news', getStoryIds)
 
-  useEffect(() => {
-    getStoryIds().then(data => setStoryIds(data));
-  }, []);
+  if (isLoading) {
+    return <h2 className="mx-16 my-8">Loading...</h2>
+  }
 
   return (
     <main className={styles.feed}>
-      {storyIds.slice(0, 100).map(storyId => (
+      {data.slice(0, 100).map(storyId => (
         <Story key={storyId} storyId={storyId} />
       ))}
     </main>
