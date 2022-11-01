@@ -5,10 +5,20 @@ import { getStoryIds } from "../../services/api";
 
 const Feed = () => {
 
-  const { isLoading, data } = useQuery('hacker-news', getStoryIds)
+  const { isLoading, data, isError, error } = useQuery('hacker-news', getStoryIds,
+    {
+      staleTime: 60000,
+      refetchInterval: 60000,
+      refetchIntervalInBackground: true,
+    }
+  )
 
   if (isLoading) {
     return <h2 className="mx-16 my-8">Loading...</h2>
+  }
+
+  if (isError) {
+    return <h2 className="mx-16 my-8">{error.message}</h2>
   }
 
   return (
