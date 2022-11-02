@@ -1,19 +1,22 @@
-import axios from "axios";
+import axios from 'axios';
 
-export const baseUrl = "https://hacker-news.firebaseio.com/v0/";
-export const newStoriesUrl = `${baseUrl}newstories.json`;
-export const storyUrl = `${baseUrl}item/`;
 
-export const getStory = async storyId => {
-  const result = await axios
-    .get(`${storyUrl + storyId}.json`)
-    .then(({ data }) => data);
+export const baseUrl = 'https://hacker-news.firebaseio.com/v0';
+export const newStoriesUrl = `${baseUrl}/newstories.json`;
+export const storyUrl = `${baseUrl}/item`;
 
-  return result;
+export const getSingleComment = () => {
+
+};
+
+export const getSingleStory = async (storyId) => {
+    const { data } = await axios.get(`${storyUrl}/${storyId}.json`);
+
+    return data;
 };
 
 export const getStoryIds = async () => {
-  const result = await axios.get(newStoriesUrl).then(({ data }) => data);
+    const { data } = await axios.get(newStoriesUrl);
 
-  return result;
+    return data.slice(0, 100);
 };
