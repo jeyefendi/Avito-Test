@@ -5,8 +5,10 @@ export const baseUrl = 'https://hacker-news.firebaseio.com/v0';
 export const newStoriesUrl = `${baseUrl}/newstories.json`;
 export const storyUrl = `${baseUrl}/item`;
 
-export const getSingleComment = () => {
+export const getSingleComment = async (commentId) => {
+    const { data } = await axios.get(`${storyUrl}/${commentId}.json`);
 
+    return data;
 };
 
 export const getSingleStory = async (storyId) => {
