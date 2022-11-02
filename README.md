@@ -1,6 +1,4 @@
-# [NETLIFY](https://avito-hn.netlify.app/)
-
-# [VERCEL](https://avito-hn.vercel.app/)
+# [NETLIFY](https://avito-hn.netlify.app/) || [VERCEL](https://avito-hn.vercel.app/)
 
 # Getting Started with Create React App
 
