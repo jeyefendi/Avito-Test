@@ -23,8 +23,8 @@ const Comment = ({ commentId }) => {
     comment && (
       <>
         <hr />
-        <div className="m-2 w-full">
-          <div className="m-2">
+        <div className="m-1 xl:m-2 w-full">
+          <div className="m-1 xl:m-2 flex gap-2 xl:gap-4">
             <span>👤 {comment.by}</span>
             <time dateTime={comment.time}>🕑 {mapTime(comment.time)}</time>
           </div>

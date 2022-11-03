@@ -10,8 +10,8 @@
   flex-direction: column;
 }
 
-.subtitle {
-  display: flex;
-  justify-content: flex-start;
-  gap: 2em;
+.refresh {
+  position: absolute;
+  top: 2vh;
+  right: 4vw;
 }

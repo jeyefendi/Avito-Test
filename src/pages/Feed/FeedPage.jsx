@@ -30,7 +30,7 @@ const FeedPage = () => {
                     <Story key={storyId} storyId={storyId}/>
                 ))}
             </main>
-            <button onClick={async () => await refetch()} className="absolute top-4 right-16">
+            <button onClick={async () => await refetch()} className={styles.refresh}>
                 <img src="/refresh.png" alt="Refetch" className="w-16"/>
             </button>
         </>
