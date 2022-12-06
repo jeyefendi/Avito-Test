@@ -1,10 +1,12 @@
-# [NETLIFY](https://avito-hn.netlify.app/) || [VERCEL](https://avito-hn.vercel.app/)
+## Deploy
 
-# Getting Started with Create React App
+<p float="left"><a href="https://avito-hn.vercel.app/"><img src="https://www.p99conf.io/wp-content/uploads/2022/06/vercel.png" alt="Vercel" height="32" width="128"></a> <img src="https://github.com/jeyefendi/assets/blob/main/space.png?raw=true" width="32" height="32"/> <a href="https://avito-hn.netlify.app/"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg" alt="Netlify" height="32" width="128"></a></p>
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
